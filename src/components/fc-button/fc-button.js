@@ -23,13 +23,23 @@ class FCButtonController {
             classes.push(types[this.type]);
         }
 
+        if (this.active) {
+            classes.push('fc-button--active');
+        }
+
         return classes.join(' ');
+    }
+
+    onButtonClick() {
+        this.onClick();
     }
 }
 
 export default {
     bindings: {
+        active: '@',
         iconName: '@',
+        onClick: '&',
         text: '@',
         type: '@'
     },

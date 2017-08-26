@@ -3,6 +3,14 @@ import './header.scss';
 class HeaderController {
 
     constructor() {
+        this.actionList = [
+            {
+                iconName: 'bell'
+            },
+            {
+                iconName: 'search'
+            }
+        ];
         this.pageTitle = 'Fútbol Club';
     }
 

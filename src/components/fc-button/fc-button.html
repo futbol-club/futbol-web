@@ -1,9 +1,10 @@
-<button class="{{ fcButton.classes }}">
+<button
+    class="{{ fcButton.classes }}"
+    ng-click="fcButton.onButtonClick()">
     <icon
         class="fc-button__icon"
         from-button="true"
         name="{{ fcButton.iconName }}"
-        ng-if="fcButton.showIcon">
-    </icon>
-    <span class="button__text" ng-transclude></span>
+        ng-if="fcButton.showIcon"></icon>
+    <span class="fc-button__text" ng-transclude></span>
 </button>

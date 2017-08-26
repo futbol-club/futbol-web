@@ -3,8 +3,10 @@
         {{ header.pageTitle }}
     </div>
     <div ng-if="header.isUserLoggedIn()" class="header__actions">
-        <fc-button icon-name="soccer" type="flat"></fc-button>
-        <fc-button icon-name="search" type="flat"></fc-button>
-        <fc-button icon-name="settings" type="flat"></fc-button>
+        <fc-button
+            on-click="props.onClick()"
+            icon-name="{{ props.iconName }}"
+            ng-repeat="props in header.actionList"
+            type="flat"></fc-button>
     </div>
 </section>

@@ -2,20 +2,29 @@
 @import 'src/scss/variables';
 
 .fc-button {
+    cursor: hand;
     margin-left: 7px;
     padding: 0 5px;
 
     &--flat {
         background: none;
         border: 0;
-        color: inherit;
+        color: $secondary;
         font-size: 16px;
 
         @include responsive-to(tablet) {
             font-size: 20px;
         }
 
-        .button__text {
+        &:hover {
+            color: darken($secondary, 10%);
+        }
+
+        &.fc-button--active {
+            color: $secondary-text;
+        }
+
+        .fc-button__text {
             text-transform: uppercase;
         }
     }
