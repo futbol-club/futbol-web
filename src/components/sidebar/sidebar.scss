@@ -1,0 +1,13 @@
+@import 'src/scss/responsive';
+@import 'src/scss/variables';
+
+.sidebar {
+    display: none;
+    height: 100%;
+    text-align: center;
+    width: 230px;
+
+    @include responsive-to(tablet) {
+        display: block;
+    }
+}

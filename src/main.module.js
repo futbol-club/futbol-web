@@ -1,4 +1,4 @@
-import 'scss/globals.scss';
+import './main.scss';
 
 import angular from 'angular';
 import uirouter from '@uirouter/angularjs';
