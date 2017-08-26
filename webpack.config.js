@@ -70,9 +70,8 @@ module.exports = {
                 test: /\.js$/
             },
             {
-                // TODO: Add scss
-                loader: ExtractTextPlugin.extract('style', 'css-loader?sourceMap'),
-                test: /\.css$/
+                loader: 'style-loader!css-loader!sass-loader?sourceMap',
+                test: /\.scss$/
             },
             {
                 loader : 'file-loader?name=assets/fonts/[name].[ext]?[hash]',
@@ -85,5 +84,12 @@ module.exports = {
         ]
     },
     plugins: plugins,
-    devtool: isProduction ? 'source-map' : 'eval-source-map'
+    devtool: isProduction ? 'source-map' : 'eval-source-map',
+    resolve: {
+        extensions: ['.js'],
+        modules: [
+            path.resolve(__dirname, 'src'),
+            path.resolve(__dirname, 'node_modules')
+        ]
+    }
 };

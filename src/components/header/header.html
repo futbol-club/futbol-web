@@ -1,0 +1,10 @@
+<section class="header">
+    <div class="header__main">
+        {{ header.pageTitle }}
+    </div>
+    <div ng-if="header.isUserLoggedIn()" class="header__actions">
+        <fc-button icon-name="soccer" type="flat"></fc-button>
+        <fc-button icon-name="search" type="flat"></fc-button>
+        <fc-button icon-name="settings" type="flat"></fc-button>
+    </div>
+</section>

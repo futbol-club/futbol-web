@@ -9,9 +9,10 @@ new WebpackDevServer(webpack(config), {
     contentBase: path.resolve(__dirname, 'build'),
     historyApiFallback: true,
     hot: true,
+    inline: true,
     stats: {
         cached: false,
-        colors: false,
+        colors: true,
         chunk: false,
         modules: false
     }

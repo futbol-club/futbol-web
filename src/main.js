@@ -1,9 +1,17 @@
+import 'scss/globals.scss';
+
 import angular from 'angular';
 import uirouter from '@uirouter/angularjs';
 
-import routing from './main.config';
+import routing from 'main.config';
 
-import home from './pages/home';
+import pages from 'pages';
+import components from 'components';
 
-angular.module('app', [uirouter, home])
+angular
+    .module('app', [
+        uirouter,
+        components,
+        pages
+    ])
     .config(routing);

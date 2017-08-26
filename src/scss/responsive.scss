@@ -1,0 +1,15 @@
+$breakpoints: (
+    minimun: 320px,
+    phone: 400px,
+    tablet: 780px,
+    desktop: 1100px,
+    maximum: 1600px
+);
+
+@mixin responsive-to($size) {
+    @if map-has-key($breakpoints, $size) {
+        @media (min-width: #{map-get($breakpoints, $size)}) {
+            @content;
+        }
+    }
+}
