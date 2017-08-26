@@ -14,5 +14,13 @@
         @include responsive-to(tablet) {
             font-size: 20px;
         }
+
+        .button__text {
+            text-transform: uppercase;
+        }
+    }
+
+    &__text {
+        color: inherit;
     }
 }

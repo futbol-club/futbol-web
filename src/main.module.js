@@ -10,8 +10,8 @@ import components from 'components';
 
 angular
     .module('app', [
-        uirouter,
         components,
-        pages
+        pages,
+        uirouter
     ])
     .config(routing);

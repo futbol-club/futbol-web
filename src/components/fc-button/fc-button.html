@@ -1,8 +1,9 @@
 <button class="{{ fcButton.classes }}">
     <icon
-        ng-if="fcButton.showIcon"
+        class="fc-button__icon"
         from-button="true"
-        name="{{ fcButton.iconName }}">
+        name="{{ fcButton.iconName }}"
+        ng-if="fcButton.showIcon">
     </icon>
-    {{ fcButton.text }}
+    <span class="button__text" ng-transclude></span>
 </button>

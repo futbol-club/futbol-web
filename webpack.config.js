@@ -9,9 +9,13 @@ const webpack = require('webpack');
 
 const appName = 'app';
 const base = './';
-const entryFile = path.resolve(__dirname, 'src/main.js');
+const entryFile = path.resolve(__dirname, 'src/main.module.js');
 
 const isProduction = args.prod;
+
+let entryApp = [
+    entryFile
+];
 
 let plugins = [
     new ExtractTextPlugin(
@@ -27,6 +31,16 @@ let plugins = [
         // TODO: favicon: 'favicon.ico'
     })
 ];
+
+if (!isProduction) {
+    entryApp.push(
+        'webpack-dev-server/client?http://localhost:8080',
+        'webpack/hot/dev-server'
+    );
+    plugins.push(
+        new webpack.HotModuleReplacementPlugin()
+    );
+}
 
 if (isProduction) {
     plugins.push(
@@ -44,9 +58,7 @@ if (isProduction) {
 
 module.exports = {
     entry: {
-        app: [
-            entryFile
-        ],
+        app: entryApp,
         vendor: [
             'angular',
             '@uirouter/angularjs'

@@ -2,6 +2,7 @@
 @import 'src/scss/variables';
 
 .header {
+    align-items: center;
     background-color: $primary;
     box-shadow: $diffuse-box-shadow;
     display: flex;

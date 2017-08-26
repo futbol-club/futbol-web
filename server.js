@@ -7,13 +7,15 @@ const WebpackDevServer = require('webpack-dev-server');
 
 new WebpackDevServer(webpack(config), {
     contentBase: path.resolve(__dirname, 'build'),
-    historyApiFallback: true,
-    hot: true,
     inline: true,
+    hot: true,
+    historyApiFallback: true,
+    quiet: false,
+    noInfo: false,
     stats: {
         cached: false,
-        colors: true,
         chunk: false,
+        colors: true,
         modules: false
     }
 }).listen(8080, 'localhost', (error) => {

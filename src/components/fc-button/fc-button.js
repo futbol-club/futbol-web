@@ -35,5 +35,6 @@ export default {
     },
     controller: FCButtonController,
     controllerAs: 'fcButton',
-    template: require('./fc-button.html')
+    template: require('./fc-button.html'),
+    transclude: true
 };
