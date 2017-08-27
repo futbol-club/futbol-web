@@ -6,7 +6,11 @@ export default function routing($urlRouterProvider, $stateProvider, $locationPro
 
     $stateProvider
         .state('home', {
-            url: '/',
-            component: 'home'
+            component: 'home',
+            url: '/'
+        })
+        .state('profile', {
+            component: 'home',
+            url: '/profile'
         });
 }

@@ -1,11 +1,15 @@
-$default-background: #e1e2e1;
-$primary:            #2e7d32;
-$primary-dark:       #005005;
-$primary-light:      #60ad5e;
-$primary-text:       #ffffff;
-$secondary:          #263238;
-$secondary-dark:     #000a12;
-$secondary-light:    #4f5b62;
-$secondary-text:     #ffffff;
+$default-background:      #e1e2e1;
+$default-background-dark: darken($default-background, 5%);
+$primary:                 #2e7d32;
+$primary-dark:            #005005;
+$primary-light:           #60ad5e;
+$primary-link:            #1b5e20;
+$primary-text:            #ffffff;
+$secondary:               #263238;
+$secondary-dark:          #000a12;
+$secondary-light:         #4f5b62;
+$secondary-text:          #ffffff;
 
-$diffuse-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+$diffuse-box-shadow:      0 0 20px rgba(0, 0, 0, 0.5);
+
+$transition-time-type:    0.5s ease-in-out;

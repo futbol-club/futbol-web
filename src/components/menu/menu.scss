@@ -1,0 +1,42 @@
+@import 'src/scss/variables';
+
+.menu {
+    border-bottom: 1px solid $default-background-dark;
+    display: flex;
+
+    &--horizontal {
+        flex-direction: row;
+
+        .menu__item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    }
+
+    &--vertical {
+        flex-direction: column;
+
+        .menu__item {
+
+            .item-content {
+                padding: 20px;
+            }
+        }
+    }
+
+    &__item {
+
+        .item-content {
+            color: inherit;
+            display: block;
+            font-size: 14px;
+            text-decoration: none;
+            width: 100%;
+            transition: filter $transition-time-type;
+
+            &:hover {
+                filter: brightness(0.2);
+            }
+        }
+    }
+}
