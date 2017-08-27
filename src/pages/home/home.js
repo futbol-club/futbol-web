@@ -1,7 +1,7 @@
 class HomeController {
 
-    constructor() {
-
+    constructor(headerControl) {
+        headerControl.toggleSidebar(false);
     }
 }
 

@@ -1,0 +1,23 @@
+@import 'src/scss/responsive';
+@import 'src/scss/variables';
+
+.overlay-portal {
+    background-color: rgba(0,0,0,0);
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 32px;
+    transition: background $transition-time-type;
+    width: 0;
+    z-index: 100;
+
+    @include responsive-to(tablet) {
+        top: 0;
+    }
+
+    &--active {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+    }
+}

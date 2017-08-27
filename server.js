@@ -18,7 +18,7 @@ new WebpackDevServer(webpack(config), {
         colors: true,
         modules: false
     }
-}).listen(8080, 'localhost', (error) => {
+}).listen(8080, '0.0.0.0', (error) => {
     if (error) {
         console.log('ERROR: ', error);
     }

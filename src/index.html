@@ -10,11 +10,12 @@
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
               rel="stylesheet">
     </head>
-    <body>
+    <body class="{{ bodyStyle }}">
         <header></header>
         <div class="app">
             <sidebar></sidebar>
             <main class="container" ui-view></main>
         </div>
+        <overlay-portal></overlay-portal>
     </body>
 </html>

@@ -2,8 +2,8 @@ import './sidebar.scss';
 
 class SidebarController {
 
-    constructor($scope, headerControl) {
-        this.classes = '';
+    constructor($scope) {
+        this.classes = this.getClass();
         this.menuItems = [
             {
                 href: '/news',
@@ -15,9 +15,9 @@ class SidebarController {
             }
         ];
 
-        $scope.$watch(
-            () => headerControl.sidebarShown,
-            (sidebarShown) => {
+        $scope.$on(
+            'header-control:sidebar-toggle',
+            (event, sidebarShown) => {
                 this.classes = this.getClass(sidebarShown);
             }
         );

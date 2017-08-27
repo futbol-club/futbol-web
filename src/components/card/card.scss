@@ -1,0 +1,10 @@
+@import 'src/scss/variables';
+
+.card {
+    background-color: $default-background-light;
+    border-radius: 2px;
+    box-shadow: 0 1px $light-box-shadow;
+    margin-bottom: 10px;
+    min-height: 80px;
+    padding: 10px;
+}

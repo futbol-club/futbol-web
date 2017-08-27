@@ -6,11 +6,16 @@
     background-color: $primary;
     box-shadow: 0 0 $diffuse-box-shadow;
     display: flex;
+    height: 32px;
     justify-content: space-between;
-    padding: 7px 15px;
+    padding: 7px 10px;
+    position: fixed;
+    width: 100%;
 
     @include responsive-to(tablet) {
+        height: 54px;
         padding: 15px 20px;
+        position: relative;
     }
 
     &__main {
