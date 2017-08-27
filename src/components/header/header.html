@@ -1,7 +1,12 @@
 <section class="header">
-    <div class="header__main">
+    <fc-button
+        class="header__menu"
+        ng-click="header.toggleMenu()"
+        icon-name="menu"
+        type="flat"></fc-button>
+    <a class="header__main" href="/">
         {{ header.pageTitle }}
-    </div>
+    </a>
     <div ng-if="header.isUserLoggedIn()" class="header__actions">
         <fc-button
             on-click="props.onClick()"

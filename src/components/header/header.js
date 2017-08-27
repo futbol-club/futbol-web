@@ -2,7 +2,7 @@ import './header.scss';
 
 class HeaderController {
 
-    constructor() {
+    constructor(headerControl) {
         this.actionList = [
             {
                 iconName: 'bell'
@@ -11,12 +11,17 @@ class HeaderController {
                 iconName: 'search'
             }
         ];
+        this.headerControl = headerControl;
         this.pageTitle = 'Fútbol Club';
     }
 
     isUserLoggedIn() {
         // TODO: replace with service from login.
         return true;
+    }
+
+    toggleMenu() {
+        this.headerControl.toggleSidebar();
     }
 }
 

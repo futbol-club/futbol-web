@@ -2,13 +2,28 @@
 @import 'src/scss/variables';
 
 .sidebar {
-    display: none;
+    background-color: $default-background;
     height: 100%;
-    padding: 0 20px;
+    left: -230px;
+    padding: 15px 20px;
+    position: absolute;
+    transition: left $transition-time-type;
     width: 230px;
 
     @include responsive-to(tablet) {
+        background-color: transparent;
         display: block;
+        left: 0;
+        position: relative;
+    }
+
+    &--shown {
+        box-shadow: 0 10px $diffuse-box-shadow;
+        left: 0;
+
+        @include responsive-to(tablet) {
+            box-shadow: none;
+        }
     }
 
     &__menu {

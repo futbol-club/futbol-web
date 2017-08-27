@@ -4,7 +4,7 @@
 .header {
     align-items: center;
     background-color: $primary;
-    box-shadow: $diffuse-box-shadow;
+    box-shadow: 0 0 $diffuse-box-shadow;
     display: flex;
     justify-content: space-between;
     padding: 7px 15px;
@@ -17,9 +17,18 @@
         color: $primary-text;
         font-size: 16px;
         font-weight: bold;
+        text-decoration: none;
 
         @include responsive-to(tablet) {
             font-size: 20px;
+        }
+    }
+
+    &__menu {
+        display: block;
+
+        @include responsive-to(tablet) {
+            display: none;
         }
     }
 }

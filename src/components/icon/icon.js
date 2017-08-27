@@ -5,6 +5,7 @@ class IconController {
     constructor() {
         this.iconAlist = {
             bell: 'ion-ios-bell',
+            menu: 'ion-android-menu',
             search: 'ion-ios-search-strong',
             settings: 'ion-ios-settings',
             soccer: 'ion-ios-football'

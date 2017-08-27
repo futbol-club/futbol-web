@@ -1,4 +1,8 @@
-<aside class="sidebar">
+<aside class="{{ sidebar.classes }}">
     <profile-info></profile-info>
-    <menu class="sidebar__menu" items="sidebar.menuItems" type="vertical"></menu>
+    <menu
+        class="sidebar__menu"
+        items="sidebar.menuItems"
+        type="vertical"></menu>
+    {{ sidebar.headerControlData.sidebarShown }}
 </aside>
