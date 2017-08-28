@@ -1,0 +1,26 @@
+@import 'src/scss/responsive';
+@import 'src/scss/variables';
+
+.futbol-card {
+
+    &__subtitle {
+        font-size: 12px;
+        margin-top: 5px 0;
+        padding-left: 14px;
+        padding-bottom: 10px;
+
+        @include responsive-to(tablet) {
+            font-size: 14px;
+        }
+    }
+
+    &__title {
+        color: $secondary-light;
+        font-size: 16px;
+        padding: 7px;
+
+        @include responsive-to(tablet) {
+            font-size: 24px;
+        }
+    }
+}

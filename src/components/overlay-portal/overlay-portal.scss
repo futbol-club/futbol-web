@@ -6,14 +6,10 @@
     height: 0;
     overflow: hidden;
     position: fixed;
-    top: 32px;
+    top: 0;
     transition: background $transition-time-type;
     width: 0;
     z-index: 100;
-
-    @include responsive-to(tablet) {
-        top: 0;
-    }
 
     &--active {
         background-color: rgba(0, 0, 0, 0.5);
