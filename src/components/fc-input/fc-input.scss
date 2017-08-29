@@ -1,0 +1,85 @@
+@import 'src/scss/responsive';
+@import 'src/scss/variables';
+
+$transition-input:          0.2s ease all;
+$width-input:               300px;
+
+.fc-input {
+    margin-bottom: 45px;
+    position: relative;
+
+    &__text {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid $neutral-gray;
+        display: block;
+        font-size: 14px;
+        padding: 10px 10px 10px 5px;
+        width: 100%;
+
+        @include responsive-to(tablet) {
+            font-size: 18px;
+            width: $width-input;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:focus ~ .fc-input__label,
+        &:valid ~ .fc-input__label {
+            color: $primary;
+            font-size: 12px;
+            top: -20px;
+        }
+
+        &:focus ~ .fc-input__bar:before,
+        &:focus ~ .fc-input__bar:after {
+            width: 50%;
+        }
+    }
+
+    &__label {
+        color: $neutral-light-gray;
+        font-size: 14px;
+        font-weight: normal;
+        left: 5px;
+        pointer-events: none;
+        position: absolute;
+        top: 10px;
+        transition: $transition-input;
+
+        @include responsive-to(tablet) {
+            font-size: 18px;
+        }
+    }
+
+    &__bar {
+        display: block;
+        position: relative;
+        width: 100%;
+
+        @include responsive-to(tablet) {
+            width: $width-input;
+        }
+
+        &:before,
+        &:after {
+            background-color: $primary;
+            bottom: 1px;
+            content: '';
+            height: 2px;
+            position: absolute;
+            transition: $transition-input;
+            width: 0;
+        }
+
+        &:before {
+            left: 50%;
+        }
+
+        &:after {
+            right: 50%;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import card from 'components/card/card';
 import cardImage from 'components/card-image/card-image';
 import fcButton from 'components/fc-button/fc-button';
+import fcInput from 'components/fc-input/fc-input';
 import flyout from 'components/flyout/flyout';
 import futbolCard from 'components/futbol-card/futbol-card';
 import icon from 'components/icon/icon';
@@ -15,6 +16,7 @@ export default angular
     .component('card', card)
     .component('cardImage', cardImage)
     .component('fcButton', fcButton)
+    .component('fcInput', fcInput)
     .component('flyout', flyout)
     .component('futbolCard', futbolCard)
     .component('icon', icon)
