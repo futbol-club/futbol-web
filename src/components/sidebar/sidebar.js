@@ -2,18 +2,19 @@ import './sidebar.scss';
 
 class SidebarController {
 
-    constructor($scope) {
+    constructor($scope, $translate) {
         this.classes = this.getClass();
         this.menuItems = [
             {
                 href: '/news',
-                text: 'News'
+                text: 'BUTTON__NEWS'
             },
             {
                 href: '/next',
-                text: 'Next matches'
+                text: 'BUTTON__NEXT_MATCHES'
             }
         ];
+
 
         $scope.$on(
             'header-control:sidebar-toggle',

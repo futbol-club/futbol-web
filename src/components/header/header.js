@@ -2,8 +2,18 @@ import './header.scss';
 
 class HeaderController {
 
-    constructor(headerControl) {
+    constructor(headerControl, $translate) {
         this.actionList = [
+            {
+                onClick: () => {
+                    // TODO: @Temporary. The language control capabilities
+                    // will be hosted in user profile and configuration page.
+                    this.language = (this.language === 'en') ? 'es' : 'en';
+
+                    $translate.use(this.language);
+                },
+                text: 'BUTTON__CURRENT_LANGUAGE'
+            },
             {
                 iconName: 'bell'
             },
@@ -11,8 +21,10 @@ class HeaderController {
                 iconName: 'search'
             }
         ];
+        this.language = 'en';
         this.headerControl = headerControl;
         this.pageTitle = 'Fútbol Club';
+
     }
 
     isUserLoggedIn() {
@@ -22,6 +34,12 @@ class HeaderController {
 
     toggleMenu() {
         this.headerControl.toggleSidebar();
+    }
+
+    changeLanguage() {
+
+
+
     }
 }
 

@@ -12,6 +12,8 @@
             on-click="props.onClick()"
             icon-name="{{ props.iconName }}"
             ng-repeat="props in header.actionList"
-            type="flat"></fc-button>
+            type="flat">
+            <span translate>{{ props.text }}</span>
+        </fc-button>
     </div>
 </section>

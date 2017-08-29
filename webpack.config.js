@@ -61,6 +61,7 @@ module.exports = {
         app: entryApp,
         vendor: [
             'angular',
+            'angular-translate',
             '@uirouter/angularjs'
         ]
     },
